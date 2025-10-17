@@ -4,7 +4,12 @@ pluginManagement {
         mavenCentral()
         maven {url 'https://repo.spongepowered.org/repository/maven-public/'}
         maven { url 'https://maven.parchmentmc.org' }
+        // Fabric Loom plugin repository
+        gradlePluginPortal()
+        maven { url 'https://maven.fabricmc.net/' }
     }
 }
 
 rootProject.name = "ImmersiveEngineering-${version_minecraft}"
+// Include a Fabric subproject for the 1.21.1 Fabric port
+include 'fabric'

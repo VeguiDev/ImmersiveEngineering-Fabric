@@ -1,0 +1,68 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "Client",
+      "presentation": {
+        "group": "Mod Development - ImmersiveEngineering-1.21.1",
+        "order": 0
+      },
+      "projectName": "ImmersiveEngineering-1.21.1",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@C:\\repos\\ImmersiveEngineering-Fabric\\build\\moddev\\clientRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@C:\\repos\\ImmersiveEngineering-Fabric\\build\\moddev\\clientRunVmArgs.txt",
+        "-Dfml.modFolders\u003dimmersiveengineering%%C:\\repos\\ImmersiveEngineering-Fabric\\bin\\manual;immersiveengineering%%C:\\repos\\ImmersiveEngineering-Fabric\\bin\\api;immersiveengineering%%C:\\repos\\ImmersiveEngineering-Fabric\\bin\\main;immersiveengineering%%C:\\repos\\ImmersiveEngineering-Fabric\\bin\\datagen"
+      ],
+      "cwd": "${workspaceFolder}\\run",
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    },
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "Data",
+      "presentation": {
+        "group": "Mod Development - ImmersiveEngineering-1.21.1",
+        "order": 1
+      },
+      "projectName": "ImmersiveEngineering-1.21.1",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@C:\\repos\\ImmersiveEngineering-Fabric\\build\\moddev\\dataRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@C:\\repos\\ImmersiveEngineering-Fabric\\build\\moddev\\dataRunVmArgs.txt",
+        "-Dfml.modFolders\u003dimmersiveengineering%%C:\\repos\\ImmersiveEngineering-Fabric\\bin\\manual;immersiveengineering%%C:\\repos\\ImmersiveEngineering-Fabric\\bin\\api;immersiveengineering%%C:\\repos\\ImmersiveEngineering-Fabric\\bin\\main;immersiveengineering%%C:\\repos\\ImmersiveEngineering-Fabric\\bin\\datagen"
+      ],
+      "cwd": "${workspaceFolder}\\run",
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    },
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "Server",
+      "presentation": {
+        "group": "Mod Development - ImmersiveEngineering-1.21.1",
+        "order": 2
+      },
+      "projectName": "ImmersiveEngineering-1.21.1",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@C:\\repos\\ImmersiveEngineering-Fabric\\build\\moddev\\serverRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@C:\\repos\\ImmersiveEngineering-Fabric\\build\\moddev\\serverRunVmArgs.txt",
+        "-Dfml.modFolders\u003dimmersiveengineering%%C:\\repos\\ImmersiveEngineering-Fabric\\bin\\manual;immersiveengineering%%C:\\repos\\ImmersiveEngineering-Fabric\\bin\\api;immersiveengineering%%C:\\repos\\ImmersiveEngineering-Fabric\\bin\\main;immersiveengineering%%C:\\repos\\ImmersiveEngineering-Fabric\\bin\\datagen"
+      ],
+      "cwd": "${workspaceFolder}\\run",
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    }
+  ]
+}

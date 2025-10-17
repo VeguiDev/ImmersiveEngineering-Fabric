@@ -1,0 +1,44 @@
+plugins {
+    id 'fabric-loom' version '1.7.+'
+}
+
+group = 'blusunrize.immersiveengineering'
+version = "${rootProject.hasProperty('version_minecraft') ? rootProject.property('version_minecraft') : '1.21.1'}-fabric-port-SNAPSHOT"
+
+repositories {
+    mavenCentral()
+    maven { url 'https://maven.fabricmc.net/' }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${rootProject.findProperty('version_minecraft') ?: '1.21.1'}"
+    mappings loom.officialMojangMappings()
+
+    modImplementation 'net.fabricmc:fabric-loader:0.17.3'
+    modImplementation 'net.fabricmc.fabric-api:fabric-api:0.116.7+1.21.1'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+    withSourcesJar()
+}
+
+loom {
+    splitEnvironmentSourceSets()
+}
+
+sourceSets {
+    main {
+        java.srcDirs = [ 'src/main/java' ]
+        // Reuse assets and other resources from the root project
+        resources.srcDirs = [ 'src/main/resources', '../src/main/resources' ]
+    }
+}
+
+// No resource expansion to avoid config-cache issues; keep fabric.mod.json static
+
+tasks.withType(JavaCompile).configureEach {
+    options.release = 21
+}

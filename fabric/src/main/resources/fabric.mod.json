@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "immersiveengineering",
+  "version": "1.21.1-fabric-port-SNAPSHOT",
+  "name": "Immersive Engineering (Fabric)",
+  "description": "Work-in-progress Fabric port scaffold for Immersive Engineering.",
+  "authors": ["BluSunrize", "Malte0811", "Contributors"],
+  "license": "LGPL-3.0-or-later",
+  "icon": "logo.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "blusunrize.immersiveengineering.fabric.IEFabricMod"
+    ]
+  },
+  "mixins": [
+    "immersiveengineering.mixins.json"
+  ],
+  "depends": {
+    "minecraft": ">=1.21.1",
+    "fabricloader": ">=0.14.0",
+    "fabric-api": ">=0.116.0"
+  },
+  "contact": {
+    "issues": "https://github.com/ImmersiveEngineering/ImmersiveEngineering/issues",
+    "sources": "https://github.com/ImmersiveEngineering/ImmersiveEngineering"
+  }
+}
